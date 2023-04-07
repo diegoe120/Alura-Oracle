@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo de IMC</title>
+</head>
+
+<body>
+    <h1>Programa para calcular Indice de Masa Corporal</h1>
+    <script>
+        function saltarLinea() {
+
+            document.write("<br>");
+            document.write("<br>");
+            document.write("<br>");
+        }
+
+        function imprimir(frase) {
+            document.write(frase);
+            saltarLinea();
+        }
+
+        function calcularImc(peso, altura) {
+            return (peso / (altura * altura));
+        }
+
+        // en este ejercicio no uso parseInt() porque combierte el numero ingresado en un entero y necesito tener los datos decimales por eso uso Number
+        let nombre = prompt("ingrese su nombre");
+        let pesoInformado = Number(prompt(nombre + ", ingrese su peso"));
+        let alturaInformada = Number(prompt(nombre + ", ingrese su altura"));
+
+        let imcCalculado = calcularImc(pesoInformado, alturaInformada);
+
+        imprimir(nombre + ", su IMC calculado es: " + imcCalculado);
+
+    </script>
+</body>
+
+</html>
