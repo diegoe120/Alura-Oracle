@@ -1,7 +1,9 @@
 <meta charset="UTF-8">
-<h1>PROGRAMA CALCULAR IMC </h1>
+
+<h1>PROGRAMA JUEGO DE ADIVINACION </h1>
 
 <script>
+
     function saltarLinea() {
         document.write("<br>");
         document.write("<br>");
@@ -13,18 +15,18 @@
         saltarLinea();
     }
 
-    function calcularImc(peso, altura) {
-
-        return (peso / (altura * altura));
-
+    function sorteo(n) {
+        return Math.round(Math.random() * n);
     }
 
-    nombre = prompt("informe su nombre");
-    pesoInformado = prompt(nombre + ", informe su peso");
-    alturaInformado = prompt(nombre + ", informe su altura");
+    var numeroPensado = sorteo(10);
+    var numeroLanzado = parseInt(prompt("Ingrese un número entre 0-10"))
 
-    imcCalculado = calcularImc(pesoInformado, alturaInformado);
-
-    imprimir(nombre + ", su imc calculado es: " + imcCalculado);
+    if (numeroPensado == numeroLanzado) {
+        imprimir("usted acertó");
+    }
+    else {
+        imprimir("usted erró, el número pensado era " + numeroPensado);
+    }
 
 </script>

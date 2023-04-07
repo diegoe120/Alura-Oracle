@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Juego de adivinacion
+
+    </h1>
+    <script>
+        function saltarLinea() {
+            document.write("<br>");
+            document.write("<br>");
+            document.write("<br>");
+        }
+
+        function imprimir(frase) {
+            document.write(frase);
+            saltarLinea();
+        }
+
+        let numeroLoteria = parseInt(prompt("ingrese un numero entre 0 y 10"));
+        let numeroElegido = parseInt(prompt("Ingrese un numero entre 0" + " y " + numeroLoteria));
+
+        function sorteo(numeroLoteria, numeroElegido) {
+            numeroAlAzar = Math.round(Math.random() * numeroLoteria);
+            console.log(numeroAlAzar);
+            if (numeroAlAzar < numeroElegido) {
+                imprimir(`Su numero es mayor que ${numeroAlAzar}!`);
+            } else if (numeroAlAzar > numeroPensado) {
+                imprimir(`Su numero es menor que ${numeroAlAzar}!`)
+            } else {
+                imprimir("acerto el numero es " + numeroElegido);
+            };
+            return
+        }
+        sorteo(numeroLoteria, numeroElegido)
+
+
+
+    </script>
+</body>
+
+</html>
