@@ -36,6 +36,16 @@
 
         imprimir(nombre + ", su IMC calculado es: " + imcCalculado);
 
+        // Incorporamos el uso de else y el operador logico && (y)
+        if (imcCalculado < 18.5) {
+            imprimir("abajo de lo recomendado");
+        } else if (imcCalculado >= 18.5 && imcCalculado <= 24.9) {
+            imprimir("su IMC es considerado normal su peso es normal");
+        } else if (imcCalculado >= 25 && imcCalculado <= 29.9) {
+            imprimir("su IMC es elevado tiene sobrepeso")
+        } else {
+            imprimir("el indice esta considerado como obeso");
+        }
     </script>
 </body>
 
