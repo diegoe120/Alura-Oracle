@@ -1,0 +1,25 @@
+<meta charset="UTF-8">
+
+<h1>Tabla de Multiplicar</h1>
+
+<script>
+    function saltarLinea() {
+        document.write("<br>");
+    }
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+    let cantIntegrantes = parseInt(prompt("Ingrese la cantidad de miembros de su familia"));
+    let acumulador = 0;
+
+    for (let i = 1; i <= cantIntegrantes; i++) {
+
+        acumulador += parseInt(prompt("Ingrese la cantidad de miembros de su familia"));
+    }
+    let mediaEdades = acumulador / cantIntegrantes;
+
+    imprimir("La media de la familia es: " + mediaEdades);
+</script>

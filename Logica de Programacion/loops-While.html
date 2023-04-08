@@ -1,0 +1,26 @@
+<meta charset="UTF-8">
+<h1>
+    Fechas de los Mundiales FIFA
+</h1>
+<script>
+    function saltarLinea() {
+        document.write("<br>");
+    }
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+    var anioMundial = 1930;
+    var limite = parseInt(prompt("ingrese el anio limite para calcular"));
+
+    while (anioMundial <= limite) {
+
+        imprimir("Hubo Mundial de Fultol FIFA en el año " + anioMundial);
+        let anioMundial = anioMundial + 4;
+
+    }
+
+    alert("fin")
+</script>
